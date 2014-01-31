@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/listing_logo"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/search_bg"
+            android:focusableInTouchMode="true" >
+
+            <EditText
+                android:id="@+id/etSearchList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/search"
+                android:gravity="center"
+                android:hint="Search Your Location"
+                android:inputType="textVisiblePassword"
+                android:paddingRight="55dp"
+                android:textColor="@android:color/black" />
+
+        </FrameLayout>
+
+        <eu.erikw.PullToRefreshListView
+            android:id="@+id/lvListLocation"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:divider="#edb40b"
+            android:dividerHeight="0dp" />
+    </LinearLayout>
+
+</RelativeLayout>
